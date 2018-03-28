@@ -1,0 +1,15 @@
+<h1>Places I've Been</h1>
+
+<% @places.each do |place| %>
+  <h3><a href="/places/<%= place.id %>"><%= place.places %></a></h3>
+<% end %>
+
+<h2>Add a place to the list:</h2>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-success">Go!</button>
+</form>
